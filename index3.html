@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Ipeadata</title>
+    <link rel="stylesheet" href="styles3.css">
+
+</head>
+
+<body>
+
+    <h1>Consulta Ipeadata</h1>
+
+    <label for="metadataSelect">Escolha o Tipo de Consulta:</label>
+    <select id="metadataSelect">
+        <option value="WDI_PPCTAXAC">Taxa de paridade do poder de compra (PPC) - Referência 2005</option>
+        <option value="WDI_PPCTAXAC2011">Taxa de paridade do poder de compra (PPC) - Referência 2011</option>
+        <option value="WDI_PPCTAXAC2017">Taxa de paridade do poder de compra (PPC) - Referência 2017</option>
+    </select>
+
+    <button onclick="getData()">Consultar</button>
+    <button onclick="mostrarTabela()">Mostrar Tabela</button>
+
+    <div id="result"></div>
+
+    <script src="script3.js"></script>
+</body>
+
+</html>

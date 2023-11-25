@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilidade Pública</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+
+    <h1>Utilidade Pública</h1>
+
+
+    <div id="formularios">
+        <h2>Faça sua consulta</h2>
+        <form id="formulario">
+            <label for="cep">Digite seu CEP:</label>
+            <input type="text" id="cep" name="cep" required>
+            <button type="button" onclick="consultarCEP()">Consultar CEP</button>
+        </form>
+        <form id="formulario">
+            <label for="cnpj">Digite um CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" required>
+            <button type="button" onclick="consultarCNPJ()">Consultar CNPJ</button>
+        </form>
+        <form id="formulario">
+            <label for="ddd">Digite um DDD:</label>
+            <input type="text" id="ddd" name="ddd" required>
+            <button type="button" onclick="consultarDDD()">Consultar DDD</button>
+        </form>
+    </div>
+
+
+    <div id="resultadoConsulta"></div>
+
+    <script src="script2.js"></script>
+
+</body>
+
+</html>
