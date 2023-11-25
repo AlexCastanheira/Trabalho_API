@@ -4,20 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de Países</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="stylesInicio.css">
 </head>
 
 <body>
+    <header>
+        <h1>Trabalho API</h1>
+    </header>
 
-    <h1>Consulta de Países</h1>
+    <nav>
+        <a href="index5.html" target="contentFrame" onclick="changeTabColor(this)">Consulta de Países</a>
+        <a href="index2.html" target="contentFrame" onclick="changeTabColor(this)">Utilidade Pública</a>
+        <a href="index3.html" target="contentFrame" onclick="changeTabColor(this)">Consulta Ipeadata</a>
+        <a href="index4.html" target="contentFrame" onclick="changeTabColor(this)">Promisses test</a>
+    </nav>
 
-    <label for="selectPais">Selecione um país:</label>
-    <select id="selectPais"></select>
+    <iframe name="contentFrame" src="index5.html" frameborder="0"></iframe>
 
-    <div id="result"></div>
-
-    <script src="script.js"></script>
+    <script>
+        function changeTabColor(selectedTab) {
+            var tabs = document.querySelectorAll('nav a');
+            tabs.forEach(function (tab) {
+                tab.classList.remove('selected');
+            });
+            selectedTab.classList.add('selected');
+        }
+    </script>
 </body>
 
 </html>
