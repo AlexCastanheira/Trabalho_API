@@ -51,7 +51,7 @@ function displayData(data, selectedMetadata) {
         const table = document.createElement('table');
         const headerRow = table.createTHead().insertRow(0);
 
-        // Adicione aqui as colunas que deseja exibir, utilizando as informações do metadado
+        
         const columnNames = Object.keys(data.value[0]);
         columnNames.forEach(columnName => {
             const th = document.createElement('th');
