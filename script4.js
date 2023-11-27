@@ -3,8 +3,7 @@ const url2 = `http://www.ipeadata.gov.br/api/odata4/Metadados('WDI_PPCTAXAC2011'
 const url3 = `http://www.ipeadata.gov.br/api/odata4/Metadados('WDI_PPCTAXAC2017')`;
 
 document.getElementById('btnPromiseAny').addEventListener('click', async () => {
-    const urls = [url1, url2, url3]; // Substitua com as URLs reais
-
+    const urls = [url1, url2, url3];
     try {
         const result = await Promise.any(urls.map(url => fetch(url).then(response => response.json())));
         document.getElementById('resultPromiseAny').innerText = JSON.stringify(result);
@@ -14,7 +13,7 @@ document.getElementById('btnPromiseAny').addEventListener('click', async () => {
 });
 
 document.getElementById('btnPromiseRace').addEventListener('click', async () => {
-    const urls = [url1, url2, url3]; // Substitua com as URLs reais
+    const urls = [url1, url2, url3];
 
     try {
         const result = await Promise.race(urls.map(url => fetch(url).then(response => response.json())));
@@ -26,7 +25,7 @@ document.getElementById('btnPromiseRace').addEventListener('click', async () => 
 
 
 document.getElementById('btnPromiseAll').addEventListener('click', async () => {
-    const urls = [url1, url2, url3]; // Substitua com as URLs reais
+    const urls = [url1, url2, url3];
 
     try {
         const results = await Promise.all(urls.map(url => fetch(url).then(response => response.json())));
